@@ -2,7 +2,7 @@ import discord
 from discord.ext import commands, tasks
 import random
 import time
-from cogs import Games
+from cogs import Games, CheckIn
 
 client = commands.Bot(command_prefix = "?")
 
@@ -10,6 +10,7 @@ client = commands.Bot(command_prefix = "?")
 async def on_ready():
     await client.change_presence(status=discord.Status.idle, activity=discord.Game('Predicting your questions'))
     client.add_cog(Games(client))
+    client.add_cog(CheckIn(client))
     print("RSCpyBOT is currently running")
 
 @client.event
@@ -34,4 +35,4 @@ async def help(ctx):
 
 
 
-client.run('')
+client.run('NzQyNzc5MDg1OTE0Mzc0MzQ2.XzLE7g.FwibJ4Sh4YxVWb2bSmWaiopBGKs')
